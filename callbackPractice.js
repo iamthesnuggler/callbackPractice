@@ -158,7 +158,7 @@ each(names, function(item, indice){
 
 
 
- 
+
 
 var users = [
   {
@@ -184,3 +184,11 @@ var users = [
 getUserById(users, '16t', function(user){
   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address);
 });
+
+function getUserById(objArray, value, cb) {
+  for(var i = 0; i <objArray.length; i++) {
+    if(objArray[i].id === value) {
+      cb(objArray[i]);
+    }
+  }
+}
